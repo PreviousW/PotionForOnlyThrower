@@ -24,13 +24,7 @@ class PotionCore: JavaPlugin(), Listener {
                 if (it.type == EntityType.PLAYER) {
                     if (it != thrower) {
                         event.setIntensity(it as LivingEntity, -1.0)
-                    } else
-                    if (it == thrower) {
-                        for (effect in event.potion.effects) {
-                            it.addPotionEffect(effect)
-                        }
                     }
-
                 }
             }
         }
